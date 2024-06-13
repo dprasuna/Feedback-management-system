@@ -1,0 +1,146 @@
+/* theme https://coolors.co/134074-13315c-0b2545-8da9c4-eef4ed */
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    width: 100%;
+
+    .headerTitle {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        gap: 0.5rem;
+
+        .goToDashboard {
+            font-size: 0.9rem;
+            background-color: rgba(255, 255, 255, 0.09);
+            padding: 0.3rem 0.7rem 0.3rem 0.1rem;
+            border-radius: 0.4rem;
+
+            a {
+                display: flex;
+                align-items: center;
+                gap: 0.2rem;
+            }
+        }
+
+        @media screen and (max-width: 40em) {
+            flex-direction: column;
+            gap: 0.4rem;
+            align-items: flex-start;
+        }
+    }
+
+    .headerCta {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+
+        @media screen and (max-width: 30em) {
+            .headerCtaLinkDesktop {
+                display: none;
+            }
+        }
+    }
+}
+
+.questionArea {
+    width: 100%;
+    max-width: 35rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    margin-top: 2rem;
+
+    h2 {
+        margin-block: 2rem;
+    }
+
+    .addquesContain {
+        .quesTextInputContain {
+            margin-bottom: 2rem;
+
+            .inputQues {
+                color: var(--secondary-color);
+                width: 100%;
+                background-color: var(--text-input-bg);
+                padding: 1rem 1.5rem;
+                border: none;
+                outline: none;
+                border-radius: 0.5rem;
+            }
+        }
+
+        .quesTypeContain {
+            display: flex;
+            flex-flow: row wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+
+            label {
+                color: var(--secondary-color);
+            }
+        }
+
+        .optionContain {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.03);
+            border-radius: 1rem;
+
+            .options {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+
+                input[type=checkbox], input[type=radio] {
+                    width: 1rem;
+                    height: 1rem;
+                    accent-color: rgb(223, 122, 122);
+                    color: rgb(223, 122, 122);
+                }
+
+                textarea, input[type=text] {
+                    color: var(--secondary-color);
+                    background-color: var(--text-input-bg);
+                    padding: 1rem 1.5rem;
+                    border: none;
+                    outline: none;
+                    border-radius: 0.5rem;
+                }
+            }
+
+            .addOptionBtn {
+                margin-top: 1.5rem;
+            }
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+    }
+
+    .headerCtaLinkMobile {
+        display: none;
+        // padding-left: 1.5rem;
+        padding-top: 2rem;
+    }
+
+    @media screen and (max-width: 30em) {
+        .headerCtaLinkMobile {
+            display: initial;
+        }
+    }
+}

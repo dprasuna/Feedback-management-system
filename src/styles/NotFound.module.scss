@@ -1,0 +1,16 @@
+.contain {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 3rem;
+    }
+    h6 {
+        margin-top: 2rem;
+        font-size: 1.2rem;
+    }
+}

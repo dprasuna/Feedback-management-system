@@ -1,0 +1,193 @@
+/* theme https://coolors.co/134074-13315c-0b2545-8da9c4-eef4ed */
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    width: 100%;
+
+    .headerTitle {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        gap: 0.5rem;
+
+        .goToDashboard {
+            font-size: 0.9rem;
+            background-color: rgba(255, 255, 255, 0.09);
+            padding: 0.3rem 0.7rem 0.3rem 0.1rem;
+            border-radius: 0.4rem;
+
+            a {
+                display: flex;
+                align-items: center;
+                gap: 0.2rem;
+            }
+        }
+
+        @media screen and (max-width: 40em) {
+            flex-direction: column;
+            gap: 0.4rem;
+            align-items: flex-start;
+        }
+    }
+
+    .headerCta {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+
+        @media screen and (max-width: 30em) {
+            .headerCtaLinkDesktop {
+                display: none;
+            }
+        }
+    }
+}
+
+.formContent {
+    width: 100%;
+    max-width: 40rem;
+    padding: 3rem 0.5rem;
+
+    .formMetaData {
+        padding: 2rem 1.5rem;
+
+        .formTitle {
+            font-size: 2rem;
+        }
+
+        .formDesc {
+            opacity: 0.6;
+            font-size: 0.8rem;
+        }
+    }
+
+    .questions {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 1.5rem;
+
+        .question {
+            background-color: rgb(255, 255, 255, 0.03);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding: 2rem;
+            border-radius: 1rem;
+
+            .quesNumber {
+                font-size: 0.7rem;
+                opacity: 0.5;
+                color: var(--secondary-color);
+            }
+
+            .questionText {
+                color: var(--secondary-color);
+                font-size: 1.3rem;
+                margin: 0 0 1rem 0;
+            }
+
+            .responses {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                pointer-events: none;
+
+                .inputContainer {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    padding: 1rem;
+                    border: 0.1rem solid rgb(255 255 255 / 20%);
+                    border-radius: 0.8rem;
+    
+                    .inputs {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.5rem;
+    
+                        label {
+                            color: var(--secondary-color);
+                            display: flex;
+                            align-items: center;
+                        }
+    
+                        input[type=checkbox],
+                        input[type=radio] {
+                            margin: 0 0.5rem 0 0;
+                            width: 1rem;
+                            height: 1rem;
+                            accent-color: rgb(223, 122, 122);
+                            color: rgb(223, 122, 122);
+                        }
+    
+                        input[type=text] {
+                            color: var(--secondary-color);
+                            width: 100%;
+                            background-color: var(--text-input-bg);
+                            padding: 1rem 1.5rem;
+                            border: none;
+                            outline: none;
+                            border-radius: 0.5rem;
+                        }
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    .deleteOrSubmitBtn {
+        padding-left: 1.5rem;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+
+        button {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            align-items: center;
+        }
+    }
+
+    .headerCtaLinkMobile {
+        display: none;
+        padding-left: 1.5rem;
+    }
+
+    @media screen and (max-width: 30em) {
+        .headerCtaLinkMobile {
+            display: initial;
+        }
+    }
+}
+
+.formDeletedOrSubmittedMsg {
+    font-size: 1.5rem;
+    padding: 2rem;
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+
+    a {
+        font-size: 1rem;
+    }
+}
+
+.loadingScreen {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

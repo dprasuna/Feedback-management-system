@@ -1,0 +1,88 @@
+/* theme https://coolors.co/134074-13315c-0b2545-8da9c4-eef4ed */
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    width: 100%;
+}
+
+.newFormSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0 4rem 0;
+    gap: 1rem;
+    max-width: 25rem;
+    width: 80%;
+
+    input {
+        color: var(--secondary-color);
+        width: 100%;
+        background-color: var(--text-input-bg);
+        padding: 1rem 1.5rem;
+        border: none;
+        outline: none;
+        border-radius: 0.5rem;
+    }
+
+    .newFormBtn {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    button:disabled {
+        cursor: not-allowed;    
+    }
+}
+
+.allForms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    padding: 3rem 1.5rem 5rem 1.5rem;
+    background-color: rgb(255, 255, 255, 0.03);
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    margin-top: auto;
+
+    h1 {
+        font-size: 1.7rem;
+    }
+    
+    .forms {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 1rem;
+        padding-top: 2rem;
+
+        .formCard {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 1rem;
+            background-color: var(--text-input-bg);
+            border: 0.1rem solid white;
+            border-radius: 0.5rem;
+            width: 15rem;
+            cursor: pointer;
+            
+            .formTitle {
+                font-size: 1.7rem;
+            }
+            .formDesc {
+                opacity: 0.6;
+                font-size: 0.8rem;
+            }
+        }
+
+    }
+}
